@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="main.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <h1>Contact Form</h1>
+
+    <form>
+      <div>
+        <label for="name">Name:</label>
+        <input name="name" type="text" required>
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input name="email" type="email" required>
+      </div>
+      <div>
+        <label for="company">Company:</label>
+        <input name="company" type="text">
+      </div>
+      <div>
+        <label for="source">Where did you hear about us?</label>
+        <select name="source">
+          <option value="Social networks">Social networks</option>
+          <option value="Internet">Internet</option>
+          <option value="Word of mouth">Word of mouth</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div>
+        <label>
+          <input type="checkbox">
+          Send me a copy of the contact request
+        </label>
+      </div>
+      <button type="submit">Send contact request</button>
+    </form>
+  </body>
+</html>
