@@ -85,6 +85,42 @@ is set to the empty hash if not provided (this is the meaning of the notation
 2. print "wrong password" if the password does not correspond to the account's password.
 3. print "no password given" if the method is called without arguments.
 
+## Extra : enhance your transactions
+What about enhancing our bank account, by adding infos about the date of each
+transactions ? And change our transaction history method so that it prints
+transactions like
+
+```ruby
++ 200 euros on 22/10/13 at 8:30am
+- 120 euros on 30/11/13 at 2:30pm
++ 1050 euros on 30/11/13 at 2:30pm
+```
+
+Read about the [single responsibility
+principle](http://en.wikipedia.org/wiki/Single_responsibility_principle), now
+ask yourself :
+- What's the responsibility of the `BankAccount` class ? Print basic account
+  info and enable for cash withdraw/deposit, right?
+- Is is the responsibility of the bank account to keep track of the date of each
+  transaction and prints each transaction nicely?
+
+Here comes the time where you might delegate these responsibilities to another
+`Transaction` class, which would be responsible for :
+- keeping track of the date and amount of the deposit or withdraw
+- printing nicely these infos about itself
+- you could even think of additional data for this class such as a `@message`
+  instance variable to store the reason of each withdraw/deposit  ("car rent",
+  "pay day", "christmas gifts"...)
+
+After implementing your `Transaction` class, you will have to change your
+`BankAccount` class so that its transactions arrays stores `Transaction` objects
+instead of numbers. You will also have to load the *transaction.rb* file in
+*account.rb* with
+
+```ruby
+require_relative 'transaction'`
+```
+
 ## Learning badges
 
 - What is the public interface of a class ?
