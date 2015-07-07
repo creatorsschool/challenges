@@ -10,7 +10,7 @@ Almost everyone start with building a blog. In sinatra write an application with
 You need to create posts for your application. Start with the following code:
 
 ```ruby
-require 'sintra'
+require 'sinatra'
 
 class Post
   def initialize(id, title, body, author, created_at)
@@ -28,7 +28,7 @@ get '/' do
   erb :index
 end
 
-def '/show/:id' do
+get '/show/:id' do
   @post = # find post
   erb :show
 end
