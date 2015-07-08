@@ -4,12 +4,15 @@ A web application for your parties!
 
 ## Part I
 
-Create a web application where you can see the list of available parties and create new ones.
+Create a web application where you can do all the CRUD operation on the parties resource.
 
 Features:
 
 * Page with a list of all available parties.
-* Page with a form to insert new parties.
+* Page with to show a single party.
+* Page to create new parties.
+* Page to edit parties.
+* Buttons to remove a party.
 
 You the following as a starting point:
 
@@ -25,11 +28,11 @@ get '/' do
   erb :index
 end
 
-get '/parties/form' do
+get '/new do
   erb :form
 end
 
-get '/parties/new' do
+get '/create do
   parties << Party.new ... 
   redirect '/'
 end
@@ -37,23 +40,9 @@ end
 
 **Important:** For the creation of parties you need to run with `ruby app.rb` instead of `shotgun app.rb`.
 
+
 ## Part II
 
-Force the user to insert his username and password in order to create a party. Add this extra fields to your new party form.
-
-You should validate this username and password. Your app should have something similar to this:
-
-```ruby
-username = 'gabrielpoca'
-password = '123456'
-
-get '/parties/new' do
-  if params[:username] != username || params[:password] != pasword
-    @error_message = 'Wrong credentials'
-    erb :form
-  else
-    parties << Party.new ...
-    redirect '/'
-  end
-end
-```
+* Implement a feature to search for parties by name.
+* Implement a feature to order parties by date ASC and DESC.
+* Implement a feature to hide a party is it already happen.
