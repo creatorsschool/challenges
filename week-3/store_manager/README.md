@@ -90,24 +90,24 @@ Let's keep it going. You're almost done with the products CRUD. Now create a rou
 
 ```ruby
 get '/edit/:id' do
-  @post = # fetch post like you did everywhere else
+  @product = # fetch post like you did everywhere else
   erb :edit_form
 end
 
 get '/update/:id' do
-  posts << Post.new(the params shoudl somehow go in here)
+  products << Post.new(the params shoudl somehow go in here)
   redirect "/show/#{params[:id]}"
 end
 ```
 
 Now, remember that the form should already be filled with the post current values. For this you need to use the `value` attribute on the html input.
 
-Assuming you created a variable called `@post` you can do the following to create an input with the value allready filled.
+Assuming you created a variable called `@product` you can do the following to create an input with the value allready filled.
 
 ```html
-<form method="GET" action="/update/<%= @post.id %>">
+<form method="GET" action="/update/<%= @product.id %>">
   ...
-  <input name="name" type="text" value="<%= @post.name %>"
+  <input name="name" type="text" value="<%= @product.name %>"
   ...
 </form>
 ```
