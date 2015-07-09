@@ -104,10 +104,6 @@ class Party
     ...
   end
 end
-
-
-users = [
-]
 ```
 
 ## Part IV
