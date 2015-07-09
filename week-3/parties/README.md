@@ -110,6 +110,10 @@ users = [
 ]
 ```
 
-# Part IV
+## Part IV
 
 Add latitude and longitude to your party. Add follow [this](https://developers.google.com/maps/documentation/javascript/tutorial) tutorial in order to add a map to your party's details.
+
+## Part V - Flash messages
+
+Add flash messages for success and error. Follow [this](http://code.tutsplus.com/tutorials/singing-with-sinatra-the-encore--net-19364) tutorial on the section "Flash Messages Error and Success".
