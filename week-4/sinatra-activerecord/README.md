@@ -85,43 +85,7 @@ namespace :db do
 end
 ```
 
-#### 5 - Update the database schema
-
-Run from your terminal, on your project folder:
-`bundle exec rake db:create_migration NAME=create_users`
-
-This will execute a task that generates a database migration file that describes
-updates that will be applied to the database schema.
-
-Open the generated file at `/db/migrate/*_create_users.rb`.
-
-Add the following code to the file:
-```ruby
-class CreateUsers < ActiveRecord::Migration
-  def change
-    create_table :users do |table|
-      table.string :name
-      table.string :email
-    end
-  end
-end
-```
-
-This code will create a table `users` with a `name` and a `email` columns of
-type `string`.
-
-Now you need to apply this migration to update the database.
-
-- Run from your terminal:
-`bundle exec rake db:migrate`
-
-- Commit the code to git:
-```
-git add .
-git commit -m "Adds users table migration"
-```
-
-#### 6 - Add your main application
+#### 5 - Add your main application
 
 Create a new **/app.rb** file on your project folder.
 
@@ -170,6 +134,42 @@ access and modify database content.
 ```
 git add .
 git commit -m "Adds main application"
+```
+
+#### 6 - Update the database schema
+
+Run from your terminal, on your project folder:
+`bundle exec rake db:create_migration NAME=create_users`
+
+This will execute a task that generates a database migration file that describes
+updates that will be applied to the database schema.
+
+Open the generated file at `/db/migrate/*_create_users.rb`.
+
+Add the following code to the file:
+```ruby
+class CreateUsers < ActiveRecord::Migration
+  def change
+    create_table :users do |table|
+      table.string :name
+      table.string :email
+    end
+  end
+end
+```
+
+This code will create a table `users` with a `name` and a `email` columns of
+type `string`.
+
+Now you need to apply this migration to update the database.
+
+- Run from your terminal:
+`bundle exec rake db:migrate`
+
+- Commit the code to git:
+```
+git add .
+git commit -m "Adds users table migration"
 ```
 
 #### 7 - Test your application
