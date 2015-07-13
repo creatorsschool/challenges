@@ -6,6 +6,10 @@ Web application to manage your contacts.
 Start your project using the following:
 - https://github.com/creatorsschool/sinatra_skeleton
 
+Resources:
+- Querying in ActiveRecord: http://guides.rubyonrails.org/active_record_querying.html
+- Validations in ActiveRecord: http://guides.rubyonrails.org/active_record_validations.html
+
 **Features:**
 - Add new contact
 - Update existing contact
