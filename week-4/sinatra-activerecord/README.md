@@ -72,7 +72,20 @@ git add .
 git commit -m "Adds index view"
 ```
 
-#### 4 - Update the database schema
+#### 4 - Add a Rakefile
+
+Add a new file `Rakefile` with the following contents:
+```ruby
+require "sinatra/activerecord/rake"
+
+namespace :db do
+  task :load_config do
+    require "./app"
+  end
+end
+```
+
+#### 5 - Update the database schema
 
 Run from your terminal, on your project folder:
 `bundle exec rake db:create_migration NAME=create_users`
@@ -108,7 +121,7 @@ git add .
 git commit -m "Adds users table migration"
 ```
 
-#### 5 - Add your main application
+#### 6 - Add your main application
 
 Create a new **/app.rb** file on your project folder.
 
@@ -159,6 +172,6 @@ git add .
 git commit -m "Adds main application"
 ```
 
-#### 6 - Test your application
+#### 7 - Test your application
 
 Run your app: `ruby app.rb`
