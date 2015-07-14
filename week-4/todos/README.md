@@ -2,6 +2,8 @@
 
 Web application that manages your to-do list!
 
+Use sinatra_skeleton as your starting point: https://github.com/creatorsschool/sinatra_skeleton
+
 **Requirements:**
 - UI using Bootstrap (http://getbootstrap.com)
 - Sinatra
