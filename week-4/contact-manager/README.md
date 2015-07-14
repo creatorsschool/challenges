@@ -7,6 +7,7 @@ Start your project using the following:
 - https://github.com/creatorsschool/sinatra_skeleton
 
 Resources:
+- ActiveRecord guide: http://guides.rubyonrails.org/active_record_basics.html
 - Querying in ActiveRecord: http://guides.rubyonrails.org/active_record_querying.html
 - Validations in ActiveRecord: http://guides.rubyonrails.org/active_record_validations.html
 
