@@ -1,0 +1,31 @@
+<h2>List of available products</h2>
+
+<ul>
+  <% @products.each do |product| %>
+    <li>
+      <h3><%= product.name %> <small> - <%= product.price %> €</small></h3>
+      <p><%= product.description %></p>
+      <p><a href="/show/<%= product.name %>">show</a></p>
+      <p><a href="/remove/<%= product.name %>">Remove</a></p>
+    </li>
+  <% end %>
+</ul>
+
+<form action="/new" method="POST">
+  <p>
+    <label for="name">Name</label>
+    <input name="name" id="name" required>
+  </p>
+
+  <p>
+    <label for="price">Price</label>
+    <input name="price" id="price" type="number" required>
+  </p>
+
+  <p>
+    <label for="description">Description</label>
+    <textarea name="description" id="description" rows="8" required></textarea>
+  </p>
+
+  <input type="submit" value="Submit">
+</form>
