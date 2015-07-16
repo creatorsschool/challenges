@@ -1,6 +1,6 @@
 # Store Manager
 
-Web application that allows users to manage the products in a online store.
+Web application that allows users to manage the products of an online store.
 Products can have a category.
 
 **Start with this repository as base:** https://github.com/creatorsschool/sinatra_skeleton
