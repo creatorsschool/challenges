@@ -74,3 +74,8 @@ As a party organizer we want two new functionalities:
 
 1. Export the list of attendees as a `.txt` file, one name per line.
 2. Import attendees from a [CSV](https://en.wikipedia.org/wiki/Comma-separated_values) file with the name and email fields.
+
+## Part V - Refactoring
+
+Now that you have the import and export functionality, move that code into
+methods on the models, instead of having it lying around in the actions.
