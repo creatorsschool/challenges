@@ -125,7 +125,7 @@ See how this was mostly the same thing as in Sinatra? Except that you didn't nee
 You should now be able to see the list of posts on the browser.
 
 ## Individual Post
-We can see each post's title, but not its body. Let's add a new page to display the full content of a post. Start with the router, change the `config/router.rb` into the following:
+We can see each post's title, but not its body. Let's add a new page to display the full content of a post. Start with the router, change the `config/routes.rb` into the following:
 
 ```ruby
 Rails.application.routes.draw do
