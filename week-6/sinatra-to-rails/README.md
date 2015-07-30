@@ -109,7 +109,7 @@ class PostsController < ApplicationController
 end
 ```
 
-And open the `app/views/controllers/index.erb` and change it to the following:
+And open the `app/views/posts/index.erb` and change it to the following:
 
 ```html
 <h1>Blog</h1>
