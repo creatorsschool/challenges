@@ -168,3 +168,37 @@ There is only one more thing left, we need to create a link in the index page th
 ```
 
 Try your application and be proud. .
+
+
+# Phase 2
+
+## Routes and Actions
+
+* Create routes and actions to manage posts. Add this to your routes:
+
+    ```
+    resources :posts
+    ```
+
+And create the corresponding controller actions. No need to work on all routes, just:
+* index
+* new
+* create
+* show
+* destroy
+
+Make the corresponding views for each action in the `app/views/posts` directory.
+
+## Using route helpers
+
+If you haven't already, change all your routes to use the newly learned route helpers (i.e: `post_path(post)`, instead of `"posts/#{post.id}"`). Pay attention to HTTP methods as well. PATCH and DELETE might be required.
+
+## Using `form_for`
+
+In case you're still using a raw `<form>` tag, now's the time to migrate this to a `form_for` helper.
+This includes changing your form code to use helper methods, and changing your actions to use `params[:post]` instead of just `params`.
+
+Relevant resources:
+* [link_to](http://api.rubyonrails.org/classes/ActionView/Helpers/UrlHelper.html)
+* [form_for](http://api.rubyonrails.org/classes/ActionView/Helpers/FormHelper.html)
+* [Rails routing](http://guides.rubyonrails.org/routing.html)
