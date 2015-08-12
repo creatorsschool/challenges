@@ -1,9 +1,10 @@
 # Render a cart DOM element using JavaScript
 
-Implement a function that given an array of products it returns
-a new DOM element.
+Implement a function that given an array of products it returns a new DOM element.
 
-**Example:**
+To build the HTML you can use jQuery or the `document` API (`document.createElement()`, ...).
+
+**Usage:**
 ```javascript
 function renderCart(items) {
   // code here...
@@ -18,7 +19,7 @@ var products = [
 console.log(renderCart(products));
 ```
 
-** Result:**
+**Result:**
 ```html
 <div>
   <ul>
