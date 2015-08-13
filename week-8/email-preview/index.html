@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js" type="text/javascript"></script>
+  <script src="app.js" type="text/javascript"></script>
+</head>
+<body ng-app="app">
+  <div email-form></div>
+  <div email-preview></div>
+
+  <!-- Angular templates; these should be loaded using other approaches -->
+  <script type="text/ng-template" id="form.html">
+    <form>
+      <h1>New email</h1>
+      <div>
+        <label>
+          Subject:
+          <input ng-model="ctrl.email.subject" type="text">
+        </label>
+      </div>
+      <div>
+        <label>
+          To:
+          <input ng-model="ctrl.email.to" type="email">
+        </label>
+      <div>
+      <div>
+        <label>Message:</label>
+        <textarea ng-model="ctrl.email.message"></textarea>
+      </div>
+    </form>
+  </script>
+
+  <script type="text/ng-template" id="preview.html">
+    <div>
+      <h1>Email preview</h1>
+      <div>
+        <p>Subject: {{ ctrl.email.subject }}</p>
+        <p>To: <em>{{ ctrl.email.to }}</em></p>
+        <p>Message: {{ ctrl.email.message }}</p>
+      </div>
+    </div>
+  </script>
+</body>
+</html>
